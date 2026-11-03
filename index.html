@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#061d3c">
+  <meta name="description" content="DIHO KASIR PRO - POS, scan UPC, stok, membership dan laporan">
+  <title>DIHO KASIR PRO</title>
+  <link rel="manifest" href="./manifest.json">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <main id="app">
+    <section class="dashboard" id="dashboard" aria-label="Beranda DIHO KASIR PRO">
+      <img class="dashboard-art" src="./assets/dashboard-reference.jpg" alt="Tampilan beranda DIHO KASIR PRO">
+      <button class="hotspot nav-home" data-page="home" aria-label="Beranda"></button>
+      <button class="hotspot nav-pos" data-page="pos" aria-label="Transaksi"></button>
+      <button class="hotspot nav-inventory" data-page="inventory" aria-label="Inventaris"></button>
+      <button class="hotspot nav-member" data-page="member" aria-label="Member"></button>
+      <button class="hotspot nav-backoffice" data-page="backoffice" aria-label="Back-Office"></button>
+      <button class="hotspot nav-reports" data-page="reports" aria-label="Laporan"></button>
+      <button class="hotspot nav-security" data-page="security" aria-label="Keamanan"></button>
+
+      <button class="hotspot hero-start" data-page="pos" aria-label="Mulai transaksi"></button>
+      <button class="hotspot tile-pos" data-page="pos" aria-label="Front-Office POS dan Transaksi"></button>
+      <button class="hotspot tile-scan" data-page="scan" aria-label="Scan UPC"></button>
+      <button class="hotspot tile-edit" data-page="inventory" aria-label="Edit Barang"></button>
+      <button class="hotspot tile-member" data-page="member" aria-label="Loyalitas dan Membership"></button>
+      <button class="hotspot tile-security" data-page="security" aria-label="Keamanan dan Laporan"></button>
+      <button class="hotspot tile-backoffice" data-page="backoffice" aria-label="Manajemen Pusat"></button>
+      <button class="hotspot tile-stock" data-page="inventory" aria-label="Manajemen Inventaris dan Stok"></button>
+
+      <form class="quick-search" id="quickSearch">
+        <input id="quickQuery" type="search" placeholder="Cari nama barang..." autocomplete="off" aria-label="Cari nama barang">
+        <button type="submit">Cari</button>
+      </form>
+      <button class="hotspot settings-hit" data-page="security" aria-label="Pengaturan"></button>
+      <button class="hotspot power-hit" id="powerButton" aria-label="Keluar"></button>
+    </section>
+
+    <section class="page-shell" id="pageShell" hidden>
+      <header class="page-header">
+        <button class="back-button" id="backHome">← Beranda</button>
+        <strong>DIHO KASIR PRO</strong>
+        <span id="pageSubtitle">Kelola toko</span>
+      </header>
+      <section class="workspace" id="workspace"></section>
+    </section>
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  </main>
+  <script src="./app.js"></script>
+</body>
+</html>
